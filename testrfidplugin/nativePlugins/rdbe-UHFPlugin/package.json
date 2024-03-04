@@ -1,0 +1,29 @@
+{
+    "name": "rdbe UHF插件",
+    "id": "rdbe-UHFPlugin",
+    "version": "1.0",
+    "description": "实现了APP接收rdbe品牌UHF标签读取。",
+    "_dp_type":"nativeplugin",
+    "_dp_nativeplugin":{
+        "android": {
+			"minSdkVersion": 16,
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "rdbe-UHFPlugin-UHFModule",
+                    "class": "com.rodinrfid.rduhf.rdUHFModule"
+                }
+            ],
+            "integrateType": "aar",
+			"abis": [
+                "armeabi-v7a"
+            ],
+            "compileOptions": {
+                "sourceCompatibility": "1.8",
+                "targetCompatibility": "1.8"
+            },
+            "useAndroidX": true,
+			"hooksClass": "com.xreader.helper.rdUHFModule_AppProxy"
+        }
+    }
+}
